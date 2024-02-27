@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import {ChildOne} from "./ChildOne";
+import { ChildTwo } from './ChildTwo';
+import useUSerInfo from "./customHooks/useUserinfo";
 
 function App() {
+ const  name="Pianaki";
+ const  surName="Mohapatra";
+ const sfsdrg= useUSerInfo("op h");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>sfr  {sfsdrg}</div>
+      <ChildOne name={name}></ChildOne>
+      <ChildTwo></ChildTwo>
     </div>
   );
 }
